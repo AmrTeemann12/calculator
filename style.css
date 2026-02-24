@@ -1,0 +1,42 @@
+#container{
+    width: 70%;
+    margin: 8px auto;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: aquamarine;
+}
+
+#screen{
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    aspect-ratio: 2.5/1;
+    padding: 8px;
+    background-color: antiquewhite;
+    border: solid 2px skyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 0;
+}
+
+#input{
+    flex-shrink: 1;
+    overflow: auto;
+    margin: 0;
+    font-size: 130%;
+}
+
+#output{
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#btns-cont{
+    width: 100%;
+    aspect-ratio: 1/1;
+    padding: 8px 0;
+    display: flex;
+    flex-basis: content;
+}
