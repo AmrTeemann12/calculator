@@ -1,21 +1,28 @@
+body{
+    background-color: #69C4C4;
+}
+
 #container{
-    width: 400px;
-    margin: 8px auto;
+    width: 390px;
+    margin: 16px auto;
     padding: 8px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 8px;
-    background-color: aquamarine;
+    border-radius: 8px;
+    background-color: #38648F;
 }
 
 #screen{
+    margin-top: 4px;
     flex: 0 0 auto;
     box-sizing: border-box;
     width: 100%;
     aspect-ratio: 2.5/1;
     padding: 8px;
     background-color: antiquewhite;
-    border: solid 2px skyblue;
+    border: solid 2px #467EB4;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -25,18 +32,70 @@
 #input{
     flex-shrink: 1;
     overflow: auto;
+    scrollbar-width: thin;
     margin: 0;
-    font-size: 130%;
+    font-size: 170%;
 }
 
 #output{
-    color: rgba(0, 0, 0, 0.4);
+    margin: 0;
+    text-align: end;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 140%;
 }
 
 #btns-cont{
+    margin: 0;
     width: 100%;
     aspect-ratio: 1/1;
-    padding: 8px 0;
     display: flex;
-    flex-basis: content;
+}
+
+
+.btn{
+    width: 90px;
+    aspect-ratio: 1/1;
+    font-size: 180%;
+    border: none;
+    border-radius: 8px;
+    margin: 2px;
+    background-color: #6997C4;
+    cursor: pointer;
+}
+
+.num-btn{
+    font-size: 250%;
+}
+
+.clr-btn{
+    aspect-ratio: 2/1;
+}
+
+#operators{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.operator{
+    width: 43px;
+    margin: 3px 2px;
+    aspect-ratio: 1/2;
+    background-color: #C49669;
+}
+
+#clr-all{
+    background-color: #8F3864;
+}
+
+#equal{
+    color:#e2e1e1;
+    background-color: #C4696A;
+}
+
+#clr-last{
+    background-color: #e2e1e1;
+}
+
+#pi{
+    background-color: #696AC4;
 }
