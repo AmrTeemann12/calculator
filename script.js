@@ -27,6 +27,7 @@ function operate(num1, operator, num2){
 
         for(let i = 0; i < split.length; i++){
             if(split[i] === "") split[i] = 1;
+            if(split[i] === "-") split[i] = -1;
         }
         let red = split.reduce((sum, item) => sum * item, 1)
         
@@ -106,6 +107,7 @@ numBtns.forEach(btn => btn.addEventListener("click", (e) => {
 }))
 
 calcBtns.forEach(btn => btn.addEventListener("click", (e) => {
+    console.log(btn.id)
     if (!operator && num1){
         operator = e.target.textContent;
         updateIn()
@@ -156,4 +158,23 @@ clrLast.addEventListener("click", () => {
 
     updateIn()
     updateOut()
+})
+
+document.addEventListener("keydown", (e) => {
+    let pressed = e.key;
+    let clickEvent = new Event("click");
+
+    numBtns.forEach(btn => {
+        if(btn.textContent === pressed) btn.dispatchEvent(clickEvent); 
+    })
+    
+    calcBtns.forEach(btn => {
+        if(btn.id === `op${pressed}`) btn.dispatchEvent(clickEvent);
+    })
+
+    if(pressed === "Enter") equal.dispatchEvent(clickEvent);
+
+    if(pressed === "Backspace") clrLast.dispatchEvent(clickEvent);
+
+    if(pressed === "ArrowLeft" || pressed === "ArrowRight") convert.dispatchEvent(clickEvent)
 })
