@@ -21,30 +21,21 @@ let num2 = "";
 
 function operate(num1, operator, num2){
     let result
-    if(`${num1}`.includes("π")){
-        let split1 = num1.split("π")
+    function convertPi (num){
+        if(!(`${num}`.includes("π"))) return +num;
+        let split = num.split("π")
 
-        for(let i = 0; i < split1.length; i++){
-            if(split1[i] === "") split1[i] = 1;
+        for(let i = 0; i < split.length; i++){
+            if(split[i] === "") split[i] = 1;
         }
-        let red1 = split1.reduce((sum, item) => sum * item, 1)
+        let red = split.reduce((sum, item) => sum * item, 1)
         
-        num1 = red1 * Math.PI**(split1.length-1)
+        num = red * Math.PI**(split.length-1)
+        return num;
     }
-
-    if(num2.includes("π")){
-        let split2 = num2.split("π")
-
-        for(let i = 0; i < split2.length; i++){
-            if(split2[i] === "") split2[i] = 1;
-        }
-        let red2 = split2.reduce((sum, item) => sum * item, 1)
-
-        num2 = red2 * Math.PI**(split2.length-1)
-    }
-
-    num1 = +num1;
-    num2 = +num2;
+    
+    num1 = convertPi(num1);
+    num2 = convertPi(num2);
     switch(operator){
         case "+":
             result = add(num1, num2)

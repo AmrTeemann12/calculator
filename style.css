@@ -3,7 +3,7 @@ body{
 }
 
 #container{
-    width: 390px;
+    width: 350px;
     margin: 16px auto;
     padding: 8px;
     display: flex;
@@ -34,14 +34,14 @@ body{
     overflow: auto;
     scrollbar-width: thin;
     margin: 0;
-    font-size: 170%;
+    font-size: 150%;
 }
 
 #output{
     margin: 0;
     text-align: end;
     color: rgba(0, 0, 0, 0.5);
-    font-size: 140%;
+    font-size: 130%;
 }
 
 #btns-cont{
@@ -53,9 +53,9 @@ body{
 
 
 .btn{
-    width: 90px;
+    width: 80px;
     aspect-ratio: 1/1;
-    font-size: 180%;
+    font-size: 160%;
     border: none;
     border-radius: 8px;
     margin: 2px;
@@ -77,7 +77,7 @@ body{
 }
 
 .operator{
-    width: 43px;
+    width: 38px;
     margin: 3px 2px;
     aspect-ratio: 1/2;
     background-color: #C49669;
