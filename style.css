@@ -11,6 +11,8 @@ body{
     align-items: center;
     gap: 8px;
     border-radius: 8px;
+    border-right: solid 3px #6997C4;
+    border-bottom: solid 3px #6997C4;
     background-color: #38648F;
 }
 
@@ -22,7 +24,8 @@ body{
     aspect-ratio: 2.5/1;
     padding: 8px;
     background-color: antiquewhite;
-    border: solid 2px #467EB4;
+    border-top: solid 3px #6997C4;
+    border-left: solid 3px #6997C4;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -61,6 +64,16 @@ body{
     margin: 2px;
     background-color: #6997C4;
     cursor: pointer;
+}
+
+.btn:hover{
+    filter: brightness(0.95);
+    scale: 0.98;
+    transition: all 0.1s ease;
+}
+
+.btn:active{
+    scale: 0.95;
 }
 
 .num-btn{

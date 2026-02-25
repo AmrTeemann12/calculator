@@ -107,15 +107,16 @@ numBtns.forEach(btn => btn.addEventListener("click", (e) => {
 }))
 
 calcBtns.forEach(btn => btn.addEventListener("click", (e) => {
-    console.log(btn.id)
-    if (!operator && num1){
+    if(num1 !== "Error"){
+        if (!operator && num1){
+            operator = e.target.textContent;
+            updateIn()
+        }
+        if(num2){
+        calc()
         operator = e.target.textContent;
         updateIn()
-    }
-    if(num2){
-       calc()
-       operator = e.target.textContent;
-       updateIn()
+        }
     }
 }))
 
